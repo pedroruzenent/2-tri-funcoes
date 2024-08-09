@@ -72,7 +72,6 @@ const perguntas = [
     },
 ];
 
-
 let atual = 0;
 let perguntaAtual;
 let historiaFinal = "";
@@ -92,6 +91,7 @@ function mostraAlternativas(){
     for(const alternativa of perguntaAtual.alternativas) {
         const botaoAlternativas = document.createElement("button");
         botaoAlternativas.textContent = alternativa.texto;
+        botaoAlternativas.classList.add("botao-alternativa"); // Adiciona a classe de botão futurista
         botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
         caixaAlternativas.appendChild(botaoAlternativas);
     }
